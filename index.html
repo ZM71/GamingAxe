@@ -10,8 +10,45 @@
   <body>
     <html>
       <h1 style="background-color:rgb(255, 99, 71);">...</h1>
-<h1 style="background-color:#ff6347;">...</h1>
-<h1 style="background-color:hsl(9, 100%, 64%);">
+<style="background-color:#ff6347;">
+<style="background-color:hsl(9, 100%, 64%);">
 
-<h1 style="background-color:rgba(255, 99, 71, 0.5);">
-<h1 style="background-color:hsla(9, 100%, 64%, 0.5);">
+<style="background-color:rgba(255, 99, 71, 0.5);">
+<style="background-color:hsla(9, 100%, 64%, 0.5);">
+
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Protected Page</title>
+    <script>
+        // Set your password here
+        const correctPassword = "yourPassword"; // Change this to your desired password
+
+        function checkPassword() {
+            const userPassword = prompt("Please enter the password to access this site:");
+            if (userPassword === correctPassword) {
+                document.getElementById("content").style.display = "block"; // Show content if password is correct
+            } else {
+                alert("Incorrect password. Access denied.");
+                window.location.href = "https://www.example.com"; // Redirect to another page if password is incorrect
+            }
+        }
+
+        window.onload = checkPassword; // Check password when the page loads
+    </script>
+    <style>
+        #content {
+            display: none; /* Hide content by default */
+        }
+    </style>
+</head>
+<body>
+    <div id="content">
+        <h1>Welcome to the Protected Page</h1>
+        <p>This content is protected by a password.</p>
+    </div>
+</body>
+</html>
+
